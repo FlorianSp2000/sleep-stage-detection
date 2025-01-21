@@ -6,6 +6,18 @@ This project aims to detect sleep stages from polysomnographic data (EEG, EOG, E
 ## Data Source:
 The data used in this project comes from the SleepTight dataset, specifically from Subgroup 3 (healthy patients). You can access the dataset [here](https://sleeptight.isr.uc.pt/?page_id=48).
 
+## MLflow Integration
+
+We are using MLflow for experiment tracking, model versioning, and reproducibility. MLflow helps us manage the machine learning lifecycle, including experimentation, reproducibility, and deployment. Here's how to use it:
+
+1. Start the MLflow server:
+
+```bash
+mlflow server --host 127.0.0.1 --port 8080
+```
+
+View experiments and results in the MLflow UI by navigating to http://127.0.0.1:8080 in your web browser.
+
 ## Requirements:
 - **XGBoost** for model implementation.
 - **Metrics:** AUC, F1 score (for each class) for both development (training and validation) and test sets (2 complete patients in all stages).
